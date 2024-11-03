@@ -1,0 +1,131 @@
+/* Container Styling */
+.container {
+  max-width: 1200px; /* Increased width for better layout on large screens */
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f8f9fa; /* Subtle background color for the container */
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Softer shadow for better depth */
+}
+
+/* Header Styling */
+h1 {
+  font-size: 4rem; /* Larger font for more emphasis */
+  font-family: 'Arial', sans-serif; /* Switched to 'Arial' for a lighter weight */
+  font-weight: 600; /* Reduced weight for less boldness */
+  color: #CC2B52;
+  text-align: center;
+  letter-spacing: 2px; /* Reduced spacing for a cleaner look */
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* Stronger shadow for more impact */
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px; /* More space below the text */
+  width: 70%; /* Wider line */
+  height: 6px;
+  background: linear-gradient(90deg, #7209b7, #3a0ca3, #4361ee);
+  border-radius: 3px; /* Slightly rounded for a softer look */
+}
+
+/* Table Styling */
+table {
+  width: 100%; /* Ensure table takes full container width */
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  margin-bottom: 40px; /* Space below the table */
+}
+
+thead {
+  background-color: #343a40;
+  color: #fff;
+}
+
+th, td {
+  padding: 18px; /* More padding for better readability */
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  font-weight: 500; /* Reduced font-weight for table headers */
+  font-size: 18px;
+  text-transform: uppercase; /* More uniform styling */
+  letter-spacing: 0.5px; /* Reduced letter-spacing for table headers */
+}
+
+td {
+  font-size: 12px;
+  color: #444; /* Slightly darker for better contrast */
+  text-transform: none; /* Remove uppercase for all text in table cells */
+}
+
+/* Image Styling */
+td img {
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow to images */
+}
+
+/* Hover Effect */
+tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Table Borders */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd; /* Softer border color */
+}
+
+tbody tr:last-child {
+  border-bottom: none; /* Remove bottom border from last row */
+}
+
+/* Custom table-striped color */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #fafafa;
+}
+
+/* Responsive Image */
+.img-fluid {
+  max-width: 500px; /* Further increased image size */
+  height: auto;
+  transition: transform 0.3s;
+}
+
+/* Scale image on hover */
+td img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover for better effect */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  th, td {
+    padding: 12px; /* Reduce padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Adjust header size on small screens */
+    letter-spacing: 1px; /* Adjust letter spacing */
+  }
+
+  .img-fluid {
+    max-width: 200px; /* Increased image size for mobile */
+  }
+}
